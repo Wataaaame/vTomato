@@ -12,7 +12,7 @@
         "coverView": true,
         "es6": true,
         "postcss": true,
-        "compileHotReLoad": false,
+        "compileHotReLoad": true,
         "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
         "minified": true,
@@ -40,9 +40,8 @@
         }
     },
     "compileType": "miniprogram",
-    "libVersion": "2.19.4",
-    "appid": "wx4b2c27b861948cbd",
-    "projectname": "miniprogram-92",
+    "libVersion": "widelyUsed",
+    "projectname": "vTomato",
     "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
