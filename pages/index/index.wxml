@@ -1,0 +1,43 @@
+<view hidden="{{!isClockHide}}">
+    <!-- 时间拉伸条 -->
+    <view class="slider">
+        <slider min="1" max="60" show-value active-color="#d6735f" backgroundColor="#666666" value="{{time}}" bindchange="slideChange"></slider>
+    </view>
+
+    <!-- 标题 -->
+    <view class="task_text">
+        <view class="task_title">Choose a Task</view>
+        <view class="task_desc">You should focus on it in {{time}} min</view>
+    </view>
+
+    <!-- 任务列表 -->
+    <view class="task_cate">
+        <view class="task_item {{index == cateActiveIndex ? 'cate_text_active' : ''}}" wx:for="{{cateList}}" wx:key="index" bind:tap="tapCate" data-index="{{index}}">
+            <view class="cate_icon"><image src="/image/{{item.icon}}.png"></image></view>
+            <view class="cate_text">{{item.text}}</view>
+        </view>
+    </view>
+
+    <!-- 开始按钮 -->
+    <view class="start" bind:tap="tapFocusOn">Focus on</view>
+</view>
+
+<view class="clock" hidden="{{isClockHide}}">
+    <!-- 倒计时 -->
+    <view class="progress">
+        <canvas id="progress_bg" type="2d" class="progress_bg"></canvas>
+        <canvas id="progress_active" type="2d" class="progress_active"></canvas>
+        <view class="progress_text">{{timeStr}}</view>
+    </view>
+
+    <!-- 按钮 -->
+    <view class="btns">
+        <view class="back_btn" hidden="{{isBackHide}}" bind:tap="tapBack">Back</view>
+        <view class="pause_btn" hidden="{{isPauseHide}}" bind:tap="tapPause">pause</view>
+        <view hidden="{{isContinueStopHide}}">
+            <view class="continue_btn" bind:tap="tapContinue">continue</view>
+            <view class="quit_btn" bind:tap="tapStop">give up</view>
+        </view>
+    </view>
+
+</view>

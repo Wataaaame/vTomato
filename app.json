@@ -1,0 +1,30 @@
+{
+  "pages":[
+      "pages/index/index",
+      "pages/statistics/statistics",
+      "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d6735f",
+    "navigationBarTitleText": "vTomato",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#d6735f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./image/jishi2.png",
+        "selectedIconPath": "./image/jishi.png"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "iconPath": "./image/tongji2.png",
+        "selectedIconPath": "./image/tongji.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

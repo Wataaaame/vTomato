@@ -1,0 +1,30 @@
+<!--pages/statistics/statistics.wxml-->
+<!-- 数据页 -->
+<view class="sum">
+    <view class="sum_item" wx:for="{{sumList}}" wx:key="index">
+        <view class="item_title">{{item.title}}</view>
+        <view class="item_val">{{item.val}}</view>
+    </view>
+</view>
+
+<!-- 详情页 -->
+<view class="detail">
+    <!-- 详情页标题 -->
+    <view class="detail_title">
+        <view class="detail_title_text">Analysis</view>
+        <view class="detail_title_type">
+            <text class='{{activeIndex == 0 ? "active" : ""}}' data-index="0" bind:tap="changeType">Today</text>
+            <text class='{{activeIndex == 1 ? "active" : ""}}' data-index="1" bind:tap="changeType">History</text>
+        </view>
+    </view>
+
+    <!-- 详情列表 -->
+    <view class="detail_list" wx:if="{{showList.length>0}}">
+        <view class="list_item" wx:for="{{showList}}" wx:key="date">
+            <view class="item_date">{{item.date}}</view>
+            <view class="item_cate">{{cateList[item.cate].text}}</view>
+            <view class="item_time">{{item.time}}</view>
+        </view>
+    </view>
+    <view class="detail_list list_null" wx:else>Not available for the moment...</view>
+</view>

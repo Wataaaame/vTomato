@@ -1,0 +1,62 @@
+/* pages/statistics/statistics.wxss */
+.sum {
+    width: 750rpx;
+    height: 300rpx;
+    margin-top: 40rpx;
+    border-bottom: 10rpx lightgray solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.sum .sum_item {
+    text-align: center;
+}
+
+.sum .sum_item .item_title {
+    height: 60rpx;
+    color: darkgray;
+}
+
+.sum .sum_item .item_val {
+    height: 40rpx;
+    line-height: 40rpx;
+    color: tomato;
+}
+
+/* detail */
+.detail {
+    width: 700rpx;
+    margin: 20rpx auto;
+}
+
+.detail .detail_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail .detail_title .detail_title_type {
+    width: 250rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.active {
+    color: tomato;
+}
+
+/* 统计列表 */
+.detail_list {
+    width: 650rpx;
+    margin: 20rpx auto;
+}
+
+.list_item {
+    margin: 10rpx auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list_null {
+    color: lightgray;
+}
